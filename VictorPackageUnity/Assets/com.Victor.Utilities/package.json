@@ -1,0 +1,18 @@
+{
+  "name" : "com.victor.utilities",
+  
+  "version" : "1.0.0",
+  
+  "displayName" : "Package Helper Methods Custom",
+  
+  "description" : "Ajout de fonctions utilitaires",
+  
+  "unity" : "6000.2",
+  
+  "author" : 
+    {
+    "name" : "Victor Baz",
+    "email" : "victor.baz92@gmail.com"
+    }
+  
+}

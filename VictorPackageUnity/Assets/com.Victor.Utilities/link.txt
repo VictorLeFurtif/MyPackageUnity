@@ -1,0 +1,1 @@
+https://github.com/VictorLeFurtif/MyPackageUnity.git?path=/VictorPackageUnity/Assets/com.Victor.Utilities
