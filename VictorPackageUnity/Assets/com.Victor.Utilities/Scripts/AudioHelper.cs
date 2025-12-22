@@ -49,7 +49,7 @@ namespace com.Victor.Utilities.Scripts
         /// <param name="clip">Le clip audio à jouer</param>
         /// <param name="minPitch">Le pitch minimum</param>
         /// <param name="maxPitch">Le pitch maximum</param>
-        public static void PlayWithRandomPitch(AudioSource source, AudioClip clip, float minPitch, float maxPitch)
+        public static void PlayWithRandomPitch(this AudioSource source, AudioClip clip, float minPitch, float maxPitch)
         {
             source.pitch = Random.Range(minPitch, maxPitch);
             source.PlayOneShot(clip);
