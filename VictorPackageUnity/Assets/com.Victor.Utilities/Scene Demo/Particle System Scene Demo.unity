@@ -151,8 +151,8 @@ MonoBehaviour:
   grassMesh: {fileID: 4300000, guid: 4dbade4a00d46cd4eadb493b0537b58e, type: 2}
   grassMaterial: {fileID: 2100000, guid: 564015317a549394f85223653fdfaadb, type: 2}
   arrayGrass: []
-  grassCount: 33333
-  spawnRadius: 81.5
+  grassCount: 100000
+  spawnRadius: 126.8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -160,7 +160,7 @@ MonoBehaviour:
   minHeight: 0.8
   maxHeight: 1
   offSetGrassNormal: 1.04
-  chunkSize: 19
+  chunkSize: 10
   cameraRendering: {fileID: 1494412555}
   cameraMaxDistanceRendering: 300
 --- !u!4 &313882465
@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 313882463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.14061, y: 28.7, z: 49.65579}
+  m_LocalPosition: {x: 60.6, y: 63.7, z: 35.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -208,10 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: CustomPackageAssembly::GrassSpawner
   grassMesh: {fileID: 4300000, guid: 4dbade4a00d46cd4eadb493b0537b58e, type: 2}
-  grassMaterial: {fileID: 2100000, guid: 564015317a549394f85223653fdfaadb, type: 2}
+  grassMaterial: {fileID: 2100000, guid: d9f0f363b86aa0442ae1d6c5640d6d72, type: 2}
   arrayGrass: []
-  grassCount: 33333
-  spawnRadius: 81.5
+  grassCount: 100000
+  spawnRadius: 126.8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   minHeight: 0.8
   maxHeight: 1
   offSetGrassNormal: 1.04
-  chunkSize: 19
+  chunkSize: 10
   cameraRendering: {fileID: 1494412555}
   cameraMaxDistanceRendering: 300
 --- !u!4 &438937445
@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 438937443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.14061, y: 28.7, z: 49.65579}
+  m_LocalPosition: {x: 60.600002, y: 63.7, z: 35.799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -587,13 +587,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494412552}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15746829, y: 0.047822777, z: -0.015823767, w: 0.98623854}
-  m_LocalPosition: {x: 31.52, y: 10.2, z: 0.1}
+  m_LocalRotation: {x: 0.12521404, y: 0.56269574, z: -0.09678979, w: 0.8113733}
+  m_LocalPosition: {x: -25.6, y: 80.2, z: 26.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 18.187, y: 5.396, z: -0.974}
+  m_LocalEulerAnglesHint: {x: 18.187, y: 69.328, z: -0.974}
 --- !u!1 &1811098201
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,10 +624,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: CustomPackageAssembly::GrassSpawner
   grassMesh: {fileID: 4300000, guid: 4dbade4a00d46cd4eadb493b0537b58e, type: 2}
-  grassMaterial: {fileID: 2100000, guid: 564015317a549394f85223653fdfaadb, type: 2}
+  grassMaterial: {fileID: 2100000, guid: 27a7ff742d3d98245b8b74f1255e6753, type: 2}
   arrayGrass: []
-  grassCount: 33333
-  spawnRadius: 81.5
+  grassCount: 100000
+  spawnRadius: 126.8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -635,7 +635,7 @@ MonoBehaviour:
   minHeight: 0.8
   maxHeight: 1
   offSetGrassNormal: 1.04
-  chunkSize: 19
+  chunkSize: 10
   cameraRendering: {fileID: 1494412555}
   cameraMaxDistanceRendering: 300
 --- !u!4 &1811098203
@@ -647,7 +647,7 @@ Transform:
   m_GameObject: {fileID: 1811098201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.9, y: 6.2, z: 49.65579}
+  m_LocalPosition: {x: 64.359406, y: 41.2, z: 35.799995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
