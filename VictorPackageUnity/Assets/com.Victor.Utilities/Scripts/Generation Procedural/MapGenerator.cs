@@ -17,7 +17,7 @@ public class MapGenerator : MonoBehaviour
     public int seed;
     public Vector2 offset;
 
-    public bool AutoUpdate = false;
+    [HideInInspector] public bool AutoUpdate = false;
 
     public void GenerateMap()
     {
@@ -32,5 +32,23 @@ public class MapGenerator : MonoBehaviour
         if (mapHeight < 1) mapHeight = 1;
         if (lacunarity < 1) lacunarity = 1;
         if (octaves < 0) octaves = 0;
+    }
+
+    public void ResetValue()
+    {
+        mapWidth = 100;
+        mapHeight= 100;
+        
+        noiseScale = 10f;
+
+        octaves = 4;
+
+        persistance = 0.25f;
+
+        lacunarity = 2;
+
+        seed = 0;
+
+        offset = Vector2.zero;
     }
 }
