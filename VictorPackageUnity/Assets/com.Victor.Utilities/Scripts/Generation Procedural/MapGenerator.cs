@@ -1,4 +1,5 @@
 using System;
+using com.Victor.Utilities.Scripts.Generation_Procedural;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -19,11 +20,44 @@ public class MapGenerator : MonoBehaviour
 
     [HideInInspector] public bool AutoUpdate = false;
 
+    public TerrainType[] regions;
+
+    public DrawMode drawMode;
+
     public void GenerateMap()
     {
         float[,] noiseMap = Noise.GenerateNoiseMap(mapWidth, mapHeight,seed, noiseScale, octaves, persistance,lacunarity,offset);
+        Color[] colourMap = new Color[mapWidth * mapHeight];
         
-        display.DrawNoiseMap(noiseMap);
+        for (int y = 0; y < mapHeight; y++)
+        for (int x = 0; x < mapWidth; x++)
+        {
+            float currentHeight = noiseMap[x, y];
+            
+            for (int i = 0; i < regions.Length; i++)
+            {
+                if (currentHeight <= regions[i].Height)
+                {
+                    colourMap[y * mapWidth + x] = regions[i].Colour;
+                    break;
+                }    
+            }
+        }
+        
+        
+        switch (drawMode)
+        {
+            case DrawMode.NoiseMap:
+                display.DrawTexture(TextureGenerator.TextureFromHeightMap(noiseMap));
+                break;
+            case DrawMode.ColourMap:
+                display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap,mapWidth,mapHeight));
+                break;
+            case DrawMode.Mesh:
+                display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap),TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
+                break;
+        }
+        
     }
 
     private void OnValidate()
