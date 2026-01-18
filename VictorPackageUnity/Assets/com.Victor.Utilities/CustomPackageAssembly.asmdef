@@ -1,3 +1,6 @@
 {
-	"name": "CustomPackageAssembly"
+	"name": "CustomPackageAssembly",
+	"references": [
+		"Unity.InputSystem"
+	]
 }

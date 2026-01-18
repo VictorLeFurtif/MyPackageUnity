@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f9861bff8a53c409d3058a4ec716bb, type: 3}
+  m_Name: PlayerControllerDataPlayer
+  m_EditorClassIdentifier: CustomPackageAssembly::Data.Scripts.PlayerControllerData
+  WalkSpeed: 5
+  SprintSpeed: 8
+  CrouchSpeed: 2.5
+  SlideSpeed: 12
+  WallRunningSpeed: 7
+  GroundAcceleration: 15
+  AirAcceleration: 8
+  JumpForce: 8
+  JumpCooldown: 0.25
+  PlayerHeight: 2
+  GroundCheckDistance: 0.2
+  SlideCheckDistance: 3
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  AirMultiplier: 0.4
+  GroundDrag: 5
+  GroundForceMultiplier: 9
+  SlopeForceMultiplier: 10
+  MaxSlopeAngle: 40
+  SlopeIncreaseMultiplier: 2.5
+  CrouchYScale: 0.5
+  CrouchDownForce: 5
+  SpeedIncreaseMultiplier: 10
+  SpeedChangeThreshold: 4
+  SensX: 40
+  SensY: 40
