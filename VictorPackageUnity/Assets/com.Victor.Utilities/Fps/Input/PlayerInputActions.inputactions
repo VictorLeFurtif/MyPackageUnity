@@ -61,9 +61,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Fire1",
                     "type": "Button",
                     "id": "e35646e3-eabe-49c8-97ca-9a9ab911246f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fire2",
+                    "type": "Button",
+                    "id": "0e35271b-98f9-4032-8727-834af5d73870",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -197,7 +206,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Fire1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6360adb0-5f1d-492a-9c11-8b45064af592",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

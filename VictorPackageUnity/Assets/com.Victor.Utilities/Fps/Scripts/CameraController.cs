@@ -25,15 +25,11 @@ namespace Fps_Handle.Scripts.Controller
         }
 
         #endregion
-        
-        #region Serialized Fields
 
+        #region Fields
         [Header("Camera Components")]
         [SerializeField] private Camera playerCamera;
         [SerializeField] private Transform cameraHolder;
-        
-        [Header("Visual Effects")]
-        [SerializeField] private GameObject cameraSpeedEffect;
         
         [Header("Rotation Settings")]
         [SerializeField] private float verticalLimit = 80f;
@@ -42,19 +38,18 @@ namespace Fps_Handle.Scripts.Controller
         [SerializeField] private float defaultFOV = 80f;
         [SerializeField] private float fovTransitionSpeed = 10f;
 
-        #endregion
-        
-        #region Private Fields
+        [Header("Smoothing")] [SerializeField] private float positionSmoothing = 0.05f;
 
         private float yaw;
         private float pitch;
         
         private Transform cameraTarget;
         
-        private bool isEffectSpeedActive = false;
         
         private float targetFOV;
         private float currentFOV;
+
+        private Vector3 positionVelocity = Vector3.zero;
 
         #endregion
         
@@ -113,7 +108,6 @@ namespace Fps_Handle.Scripts.Controller
 
         private void InitializeCamera()
         {
-            ToggleSpeedEffect(false);
             
             if (playerCamera != null)
             {
@@ -159,7 +153,9 @@ namespace Fps_Handle.Scripts.Controller
             
             cameraHolder.rotation = Quaternion.Euler(pitch, yaw, 0f);
             
-            cameraHolder.position = cameraTarget.position;
+            cameraHolder.position = Vector3.SmoothDamp(cameraHolder.position, cameraTarget.position, 
+                ref positionVelocity, positionSmoothing);
+            
         }
 
         #endregion
@@ -187,33 +183,17 @@ namespace Fps_Handle.Scripts.Controller
         }
 
         #endregion
-
-        #region Speed Effect
-
-        public void ToggleSpeedEffect(bool active)
-        {
-            if (cameraSpeedEffect != null)
-            {
-                cameraSpeedEffect.SetActive(active);
-                isEffectSpeedActive = active;
-            }
-        }
-
-        #endregion
-
+        
         #region Reset
 
         public void ResetEffects()
         {
             DoFov(defaultFOV);
-            ToggleSpeedEffect(false);
         }
 
         #endregion
 
         #region Utility
-
-        public bool EffectSpeedActive() => isEffectSpeedActive;
         public Transform CameraTransform() => cameraHolder;
         public Camera GetCamera() => playerCamera;
         public float GetCurrentFOV() => currentFOV;

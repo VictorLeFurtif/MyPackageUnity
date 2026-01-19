@@ -47,7 +47,7 @@ Material:
     - _RefractionScale: 1
     - _RefractionSpeed: 0.05
     - _RefractionStrenght: 2
-    - _WaterDepth: 5.99
+    - _WaterDepth: 2.79
     m_Colors:
     - _DeepWater: {r: 0.07716256, g: 0.3535453, b: 0.9622641, a: 0.54509807}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0.7372549}

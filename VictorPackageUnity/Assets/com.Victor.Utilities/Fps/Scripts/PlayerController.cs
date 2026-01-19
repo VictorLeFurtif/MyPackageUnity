@@ -90,7 +90,6 @@ namespace Fps_Handle.Scripts.Controller
 
         private void Update()
         {
-            Debug.Log($"your speed is {rb.linearVelocity}");
             
             if (!canMove) return;
             
@@ -311,8 +310,6 @@ namespace Fps_Handle.Scripts.Controller
             );
             
             rb.linearVelocity = newVelocity;
-            
-            //UpdateSpeedEffect(new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z).magnitude);
         }
 
         private Vector3 CalculateTargetVelocity()
@@ -325,23 +322,7 @@ namespace Fps_Handle.Scripts.Controller
             
             return moveDirection.normalized * moveSpeed;
         }
-
-        private void UpdateSpeedEffect(float currentSpeed)
-        {
-            if (cameraController == null) return;
-
-            if (currentSpeed > data.SprintSpeed)
-            {
-                if (!cameraController.EffectSpeedActive())
-                {
-                    cameraController.ToggleSpeedEffect(true);
-                }
-            }
-            else
-            {
-                cameraController.ToggleSpeedEffect(false);
-            }
-        }
+        
 
         private void Jump()
         {

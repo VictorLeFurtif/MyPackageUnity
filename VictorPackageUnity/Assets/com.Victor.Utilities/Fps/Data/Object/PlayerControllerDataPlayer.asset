@@ -37,5 +37,5 @@ MonoBehaviour:
   CrouchDownForce: 5
   SpeedIncreaseMultiplier: 10
   SpeedChangeThreshold: 4
-  SensX: 40
-  SensY: 40
+  SensX: 20
+  SensY: 20
