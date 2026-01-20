@@ -7,12 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineFullScreenMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: afa3c6633d903eb46b04d3cb3561a914, type: 3}
+  m_Name: low_life_m
+  m_Shader: {fileID: -6465566751694194690, guid: eec15152d362302479b3006ee5641889, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _OVERLAY
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -38,11 +37,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorThreshold: 0.1
-    - _NormalThreshold: 0.1
-    - _OVERLAY: 1
-    - _Outline_Thickness: 0.75
+    - _Speed: 0.714
+    - _VignetteIntensity: 1.21
+    - _VignettePower: 3.61
+    - _VoronoiIntensity: 1.24
+    - _VoronoiPower: 2.17
     m_Colors:
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

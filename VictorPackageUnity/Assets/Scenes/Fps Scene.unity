@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 150002502}
   - component: {fileID: 150002501}
   - component: {fileID: 150002500}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &385402480
 Transform:
   m_ObjectHideFlags: 0
@@ -667,12 +667,12 @@ GameObject:
   - component: {fileID: 560426328}
   - component: {fileID: 560426327}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Fps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &560426327
 MonoBehaviour:
   m_ObjectHideFlags: 0

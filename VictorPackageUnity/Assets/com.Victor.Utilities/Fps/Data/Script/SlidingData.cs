@@ -13,7 +13,10 @@ public class SlidingData : ScriptableObject
 
     [Header("Forces")]
     [Tooltip("Force de slide")]
-    public float SlideForce = 400f;
+    public float SlideSpeed = 400f;
+    
+    [Tooltip("Accélération")]
+    public float SlideAcceleration = 10f;
         
     [Tooltip("Force vers le bas au début du slide")]
     public float SlideDownForce = 5f;

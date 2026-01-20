@@ -166,15 +166,32 @@ namespace Fps_Handle.Scripts.Controller
         private void SlidingMovement()
         {
             Vector3 inputDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+            Vector3 currentVelocity = rb.linearVelocity;
+            
             if (!pc.OnSlope() || rb.linearVelocity.y > -0.1f)
             {
-                rb.AddForce(inputDirection.normalized * data.SlideForce, ForceMode.Force);
+                Vector3 targetVelocity = inputDirection.normalized * data.SlideSpeed;
+
+                Vector3 newVelocity = new Vector3(
+                    Mathf.Lerp(currentVelocity.x, targetVelocity.x, data.SlideAcceleration * Time.fixedDeltaTime),
+                    currentVelocity.y,
+                    Mathf.Lerp(currentVelocity.z, targetVelocity.z, data.SlideAcceleration * Time.fixedDeltaTime));
+                
+                rb.linearVelocity = newVelocity;
                 slideTimer -= Time.deltaTime;
             }
             else
             {
-                rb.AddForce(pc.GetSlopeMoveDirection(inputDirection) * data.SlideForce, ForceMode.Force);
+                Vector3 slopeDirection = pc.GetSlopeMoveDirection(inputDirection);
+                Vector3 targetVelocity = slopeDirection * data.SlideSpeed;
+                
+                Vector3 newVelocity = new Vector3(
+                    Mathf.Lerp(currentVelocity.x, targetVelocity.x, data.SlideAcceleration * Time.fixedDeltaTime),
+                    currentVelocity.y,
+                    Mathf.Lerp(currentVelocity.z, targetVelocity.z, data.SlideAcceleration * Time.fixedDeltaTime)
+                );
+                
+                rb.linearVelocity = newVelocity;
             }
             
             if (slideTimer <= 0)

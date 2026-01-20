@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SlidingDataPlayer
   m_EditorClassIdentifier: CustomPackageAssembly::Data.Scripts.SlidingData
   SlideYScale: 0.5
-  SlideForce: 400
+  SlideSpeed: 50.24
+  SlideAcceleration: 10
   SlideDownForce: 5
   MaxSlideTime: 1
   SlideCheckDistance: 3
